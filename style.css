@@ -12,8 +12,6 @@ body {
 
 /* ✅ قسم الغلاف */
 .hero {
-   /* ✅ قسم الغلاف */
-.hero {
     background-image: url('https://raw.githubusercontent.com/IWAsalya/TechPulse-Gaza/main/photo/images.jpg');
     background-size: cover;
     background-position: center;
@@ -24,9 +22,14 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
+    z-index: 0;
 }
 
+.hero h1 {
+    color: red;
+    z-index: 1;  /* تأكد من ظهور النص فوق الصورة */
 }
+
 
 /* ✅ الهيدر */
 .header {
