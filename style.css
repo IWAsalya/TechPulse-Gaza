@@ -1,5 +1,7 @@
+/* استيراد الخطوط */
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
 
+/* التنسيق العام للجسم */
 body {
     font-family: 'Tajawal', sans-serif;
     margin: 0;
@@ -8,7 +10,7 @@ body {
     color: #333;
 }
 
-/* ✅ تنسيق الهيدر */
+/* ✅ الهيدر */
 .header {
     background-color: #008080;
     color: white;
@@ -39,10 +41,28 @@ body {
     color: white;
     text-decoration: none;
     padding: 15px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background: #008080;
 }
 
 .sidebar.show {
     left: 0;
+}
+
+/* ✅ زر القائمة للأجهزة الصغيرة */
+.menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: 15px;
 }
 
 /* ✅ شريط الأخبار */
@@ -55,6 +75,31 @@ body {
     box-shadow: 0px 4px 2px -2px gray;
     margin-top: 60px;
     font-weight: bold;
+}
+
+.news-container {
+    display: flex;
+    animation: scrollNews 10s linear infinite;
+}
+
+.news-container a {
+    color: #000;
+    text-decoration: none;
+    padding: 0 20px;
+}
+
+/* حركة شريط الأخبار */
+@keyframes scrollNews {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+/* ✅ محتوى الصفحة */
+.content {
+    padding: 80px 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
 }
 
 /* ✅ الأزرار */
@@ -71,7 +116,7 @@ body {
     background: #005757;
 }
 
-/* ✅ الخدمات */
+/* ✅ خدمات */
 .services {
     display: flex;
     justify-content: center;
@@ -100,4 +145,16 @@ footer {
     color: white;
     padding: 15px;
     text-align: center;
+}
+
+/* ✅ تحسينات للأجهزة الصغيرة */
+@media screen and (max-width: 600px) {
+    .content {
+        padding: 100px 20px;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
 }
