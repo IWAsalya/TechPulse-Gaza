@@ -6,11 +6,11 @@ document.addEventListener("DOMContentLoaded", function () {
         sidebar.classList.toggle("show");
     });
 
-    // ✅ جلب الأخبار الحية
+    // جلب الأخبار الحية
     fetch("https://api.rss2json.com/v1/api.json?rss_url=https://www.theverge.com/rss/index.xml")
         .then(response => response.json())
         .then(data => {
-            const newsContainer = document.querySelector(".news-container");
+            const newsContainer = document.getElementById("news-container");
             newsContainer.innerHTML = "";
             data.items.slice(0, 5).forEach(news => {
                 let newsItem = document.createElement("a");
