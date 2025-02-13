@@ -1,95 +1,37 @@
-/* إعدادات عامة */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    direction: rtl;
-}
-
-header {
+/* تنسيق شريط الأخبار */
+.news-ticker {
     background-color: #007bff;
     color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2em;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1em;
-}
-
-main {
-    padding: 20px;
-}
-
-.contact-info {
-    text-align: center;
-}
-
-.contact-info h2 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-}
-
-.contact-info p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-/* تنسيق الأزرار */
-.btn {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.1em;
-    display: inline-block;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-    text-align: center;
-}
-
-/* تخصيص زر WhatsApp */
-.wa-btn {
-    background-color: #25d366;  /* اللون المميز للواتساب */
-}
-
-.wa-btn:hover {
-    background-color: #128c7e;  /* اللون الداكن للواتساب عند التمرير */
-}
-
-/* تخصيص زر Telegram */
-.tg-btn {
-    background-color: #0088cc;  /* اللون المميز لتليغرام */
-}
-
-.tg-btn:hover {
-    background-color: #006bb3;  /* اللون الداكن لتليغرام عند التمرير */
-}
-
-/* تنسيق الفوتر */
-footer {
-    text-align: center;
     padding: 10px;
-    background-color: #007bff;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.news-container {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scrollNews 15s linear infinite;
+}
+
+/* حركة شريط الأخبار */
+@keyframes scrollNews {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* تنسيق الروابط داخل الأخبار */
+.news-container a {
     color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.news-container a:hover {
+    text-decoration: underline;
 }
