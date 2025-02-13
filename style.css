@@ -1,87 +1,95 @@
-/* تنسيقات عامة */
+/* إعدادات عامة */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
+    direction: rtl;
 }
 
 header {
     background-color: #007bff;
     color: white;
-    padding: 20px;
     text-align: center;
+    padding: 20px;
 }
 
-header nav ul {
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav ul {
     list-style-type: none;
     padding: 0;
 }
 
-header nav ul li {
+nav ul li {
     display: inline;
-    margin-right: 10px;
+    margin: 0 10px;
 }
 
-header nav ul li a {
+nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 1.1em;
 }
 
-h1, h2, h3 {
-    font-size: 2em;
-    color: #333;
-}
-
-footer {
-    background-color: #343a40;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-}
-
-/* تنسيق قسم الخدمات */
-.services {
-    margin: 30px auto;
-    max-width: 1100px;
-    text-align: center;
-}
-
-.service-card {
-    background-color: white;
-    border-radius: 8px;
+main {
     padding: 20px;
-    margin: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    display: inline-block;
-    width: 280px;
-    text-align: left;
 }
 
-.service-card h3 {
-    color: #007bff;
-    font-size: 1.5em;
+.contact-info {
+    text-align: center;
+}
+
+.contact-info h2 {
+    font-size: 1.8em;
     margin-bottom: 10px;
 }
 
-.service-card p {
+.contact-info p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* تنسيق الأزرار */
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
     font-size: 1.1em;
-    color: #555;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    text-align: center;
 }
 
-.service-card:hover {
-    transform: translateY(-10px);
+/* تخصيص زر WhatsApp */
+.wa-btn {
+    background-color: #25d366;  /* اللون المميز للواتساب */
 }
 
-/* تنسيق للأجهزة الصغيرة */
-@media (max-width: 768px) {
-    .service-card {
-        width: 100%;
-        margin: 20px 0;
-    }
+.wa-btn:hover {
+    background-color: #128c7e;  /* اللون الداكن للواتساب عند التمرير */
+}
+
+/* تخصيص زر Telegram */
+.tg-btn {
+    background-color: #0088cc;  /* اللون المميز لتليغرام */
+}
+
+.tg-btn:hover {
+    background-color: #006bb3;  /* اللون الداكن لتليغرام عند التمرير */
+}
+
+/* تنسيق الفوتر */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
 }
