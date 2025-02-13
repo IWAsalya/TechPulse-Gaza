@@ -1,29 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const newsContainer = document.getElementById("news-container");
+    const menuToggle = document.querySelector(".menu-toggle");
+    const sidebar = document.querySelector(".sidebar");
 
-    // رابط RSS لأخبار التكنولوجيا من Google News
-    const rssUrl = "https://corsproxy.io/?https://news.google.com/rss/search?q=تكنولوجيا&hl=ar&gl=US&ceid=US:ar";
+    menuToggle.addEventListener("click", function () {
+        sidebar.classList.toggle("show");
+    });
 
-    fetch(rssUrl)
-        .then(response => response.text())
-        .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+    // جلب الأخبار الحية من مصدر موثوق
+    fetch("https://api.rss2json.com/v1/api.json?rss_url=https://www.theverge.com/rss/index.xml")
+        .then(response => response.json())
         .then(data => {
-            const items = data.querySelectorAll("item");
-            let newsHtml = "";
-
-            items.forEach((item, index) => {
-                if (index < 5) { // عرض أول 5 أخبار فقط
-                    const title = item.querySelector("title").textContent;
-                    const link = item.querySelector("link").textContent;
-                    newsHtml += <a href="${link}" target="_blank">${title}</a> | ;
-                }
+            const newsContainer = document.getElementById("news-container");
+            newsContainer.innerHTML = ""; // إزالة النص الافتراضي
+            data.items.slice(0, 5).forEach(news => {
+                let newsItem = document.createElement("a");
+                newsItem.href = news.link;
+                newsItem.target = "_blank";
+                newsItem.innerText = news.title;
+                newsContainer.appendChild(newsItem);
             });
-
-            // تحديث شريط الأخبار
-            newsContainer.innerHTML = newsHtml;
         })
-        .catch(error => {
-            console.error("Error fetching news:", error);
-            newsContainer.innerHTML = "<p>تعذر تحميل الأخبار. حاول مرة أخرى لاحقًا.</p>";
-        });
+        .catch(error => console.error("خطأ في تحميل الأخبار:", error));
 });
