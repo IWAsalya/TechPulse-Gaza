@@ -1,9 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.querySelector(".menu-toggle");
     const sidebar = document.querySelector(".sidebar");
+    const body = document.querySelector("body");
 
+    // فتح/إغلاق القائمة الجانبية
     menuToggle.addEventListener("click", function () {
         sidebar.classList.toggle("show");
+    });
+
+    // إغلاق القائمة عند النقر خارجها
+    body.addEventListener("click", function (event) {
+        if (!sidebar.contains(event.target) {
+            sidebar.classList.remove("show");
+        }
+    });
+
+    // إغلاق القائمة عند النقر على رابط
+    sidebar.addEventListener("click", function (event) {
+        if (event.target.tagName === "A") {
+            sidebar.classList.remove("show");
+        }
     });
 
     // جلب الأخبار الحية
