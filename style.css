@@ -1,17 +1,24 @@
-/* ✅ إعدادات عامة */
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
-
-body {
-    font-family: 'Tajawal', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+:root {
+    --primary-color: #008080;
+    --secondary-color: #005f5f;
+    --accent-color: #ffcc00;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --font-family: 'Tajawal', sans-serif;
 }
 
-/* ✅ تنسيق الهيدر */
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* الهيدر */
 .header {
-    background-color: #008080;
+    background-color: var(--primary-color);
     color: white;
     padding: 15px;
     text-align: center;
@@ -24,7 +31,7 @@ body {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* ✅ القائمة الجانبية */
+/* القائمة الجانبية */
 .sidebar {
     position: fixed;
     top: 0;
@@ -32,8 +39,8 @@ body {
     width: 250px;
     height: 100%;
     background: #222;
-    padding-top: 20px;
-    transition: all 0.3s;
+    padding-top: 60px;
+    transition: all 0.3s ease;
     z-index: 2000;
 }
 
@@ -43,18 +50,18 @@ body {
     text-decoration: none;
     padding: 15px;
     font-size: 18px;
-    transition: 0.3s;
+    transition: background 0.3s;
 }
 
 .sidebar a:hover {
-    background: #008080;
+    background: var(--primary-color);
 }
 
 .sidebar.show {
     left: 0;
 }
 
-/* ✅ زر القائمة للأجهزة الصغيرة */
+/* زر القائمة للأجهزة الصغيرة */
 .menu-toggle {
     font-size: 24px;
     cursor: pointer;
@@ -72,9 +79,9 @@ body {
     }
 }
 
-/* ✅ شريط الأخبار */
+/* شريط الأخبار */
 .news-ticker {
-    background: #ffcc00;
+    background: var(--accent-color);
     color: #000;
     padding: 10px;
     overflow: hidden;
@@ -90,25 +97,25 @@ body {
     padding: 0 20px;
 }
 
-/* ✅ الأزرار */
-.button {
+/* الأزرار */
+.button, .btn {
     display: inline-block;
-    background: #008080;
+    background: var(--primary-color);
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
-    transition: 0.3s;
+    transition: background 0.3s;
     margin: 10px;
 }
 
-.button:hover {
-    background: #005f5f;
+.button:hover, .btn:hover {
+    background: var(--secondary-color);
 }
 
-/* ✅ محتوى الصفحة */
+/* المحتوى الرئيسي */
 .content {
     padding: 80px 20px;
     text-align: center;
@@ -116,13 +123,7 @@ body {
     margin: auto;
 }
 
-/* ✅ تنسيق صفحة الاتصال */
-.contact-container {
-    text-align: center;
-    margin-top: 50px;
-}
-
-/* ✅ تحسينات للأجهزة الصغيرة */
+/* تحسينات للأجهزة الصغيرة */
 @media screen and (max-width: 600px) {
     .content {
         padding: 100px 20px;
