@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechPulse Gaza</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
 </head>
 <body>
-    <!-- الهيدر -->
     <header class="header">
-        <span class="menu-toggle" id="menu-toggle">&#9776;</span>
-        <h1>TechPulse Gaza</h1>
-        <nav>
-            <ul class="nav-links">
+        <span class="menu-toggle">&#9776;</span>
+        <h1>مرحباً بكم في TechPulse Gaza</h1>
+        <nav class="nav">
+            <ul>
                 <li><a href="index.html">الرئيسية</a></li>
                 <li><a href="about.html">عن الشركة</a></li>
                 <li><a href="services.html">الخدمات</a></li>
@@ -22,22 +21,20 @@
         </nav>
     </header>
     
-    <!-- القائمة الجانبية -->
-    <aside class="sidebar" id="sidebar">
-        <span class="close-btn" id="close-btn">&times;</span>
+    <aside class="sidebar">
         <a href="#">الرئيسية</a>
         <a href="#">أخبار تقنية</a>
         <a href="#">نصائح تقنية</a>
         <a href="#">أخبار الموبايلات</a>
         <a href="#">الذكاء الاصطناعي</a>
     </aside>
-    
-    <!-- شريط الأخبار -->
+
     <section class="news-ticker">
-        <div class="news-container" id="news-container">جاري تحميل الأخبار...</div>
+        <div class="news-container" id="news-container">
+            <p>جاري تحميل الأخبار...</p>
+        </div>
     </section>
-    
-    <!-- المحتوى الرئيسي -->
+
     <main class="content">
         <section class="intro">
             <h2>نحن نقدم الحلول التقنية الرائدة</h2>
@@ -45,7 +42,7 @@
             <a href="services.html" class="btn">اكتشف خدماتنا</a>
         </section>
     </main>
-    
+
     <footer>
         <p>&copy; 2025 TechPulse Gaza. جميع الحقوق محفوظة.</p>
     </footer>
