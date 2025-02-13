@@ -1,187 +1,71 @@
-/* إعدادات عامة */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    direction: rtl;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* الهيدر */
-header {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2em;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 10px;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1em;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* شريط الأخبار */
-.news-ticker {
-    background-color: #007bff;
-    color: white;
-    padding: 10px;
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-}
-
-.news-container {
-    display: inline-block;
-    white-space: nowrap;
-    animation: scrollNews 15s linear infinite;
-}
-
-/* حركة شريط الأخبار */
-@keyframes scrollNews {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-}
-
-.news-container a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-}
-
-.news-container a:hover {
-    text-decoration: underline;
-}
-
-/* الصفحة الرئيسية */
-.intro {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.intro h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-.intro p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-.btn {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.1em;
-    display: inline-block;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-    text-align: center;
-}
-
-.btn:hover {
-    background-color: #0056b3;
-}
-
-/* صفحة الخدمات */
-.services {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.services h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.service-item {
-    background: white;
-    padding: 20px;
-    margin: 15px auto;
-    max-width: 600px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.service-item h3 {
-    color: #007bff;
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-/* صفحة الاتصال */
-.contact-info {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.contact-info h2 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-}
-
-.contact-info p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-/* أزرار الاتصال */
-.wa-btn {
-    background-color: #25d366;
-}
-
-.wa-btn:hover {
-    background-color: #128c7e;
-}
-
-.tg-btn {
-    background-color: #0088cc;
-}
-
-.tg-btn:hover {
-    background-color: #006bb3;
-}
-
-/* الفوتر */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    margin-top: 50px;
-}
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPulse Gaza</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- الهيدر -->
+    <header class="header">
+        <span class="menu-toggle">&#9776;</span>
+        <h1>مرحباً بكم في TechPulse Gaza</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">عن الشركة</a></li>
+                <li><a href="services.html">الخدمات</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- القائمة الجانبية -->
+    <aside class="sidebar">
+        <a href="#">الرئيسية</a>
+        <a href="#">أخبار تقنية</a>
+        <a href="#">نصائح تقنية</a>
+        <a href="#">أخبار الموبايلات</a>
+        <a href="#">الذكاء الاصطناعي</a>
+    </aside>
+    
+    <!-- شريط الأخبار -->
+    <section class="news-ticker">
+        <div class="news-container" id="news-container">
+            <p>جاري تحميل الأخبار...</p>
+        </div>
+    </section>
+    
+    <!-- المحتوى الرئيسي -->
+    <main class="content">
+        <section class="intro">
+            <h2>نحن نقدم الحلول التقنية الرائدة</h2>
+            <p>نحن هنا لنبني حلول مبتكرة تلبي احتياجاتك التكنولوجية.</p>
+            <a href="services.html" class="btn">اكتشف خدماتنا</a>
+        </section>
+        <section class="services">
+            <h2>خدماتنا</h2>
+            <div class="service-item">
+                <h3>تصميم المواقع</h3>
+                <p>نقوم بإنشاء مواقع احترافية تلبي احتياجات أعمالك.</p>
+            </div>
+            <div class="service-item">
+                <h3>تطوير التطبيقات</h3>
+                <p>نطور تطبيقات حديثة تلبي متطلبات السوق.</p>
+            </div>
+        </section>
+        <section class="contact-info">
+            <h2>اتصل بنا</h2>
+            <p>تواصل معنا عبر واتساب أو تليجرام لمزيد من المعلومات.</p>
+            <a href="#" class="button wa-btn">واتساب</a>
+            <a href="#" class="button tg-btn">تليجرام</a>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 TechPulse Gaza. جميع الحقوق محفوظة.</p>
+    </footer>
+</body>
+</html>
