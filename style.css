@@ -1,3 +1,4 @@
+/* تنسيقات مشتركة */
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
@@ -6,11 +7,51 @@ body {
 }
 
 header {
-    background-color: #343a40;
+    background-color: #007bff;
     color: white;
     padding: 20px;
 }
 
-h1 {
+h1, h2 {
     font-size: 2em;
+    color: #333;
+}
+
+/* التنسيق للأقسام */
+section {
+    margin: 20px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* التنسيق للقائمة */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
