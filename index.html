@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechPulse Gaza</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
+    <!-- الهيدر -->
+    <header class="header">
+        <span class="menu-toggle">&#9776;</span>
         <h1>مرحباً بكم في TechPulse Gaza</h1>
         <nav>
             <ul>
@@ -18,26 +21,39 @@
             </ul>
         </nav>
     </header>
-
+    
+    <!-- القائمة الجانبية -->
+    <aside class="sidebar">
+        <a href="#">الرئيسية</a>
+        <a href="#">أخبار تقنية</a>
+        <a href="#">نصائح تقنية</a>
+        <a href="#">أخبار الموبايلات</a>
+        <a href="#">الذكاء الاصطناعي</a>
+    </aside>
+    
     <!-- شريط الأخبار -->
     <section class="news-ticker">
         <div class="news-container" id="news-container">
             <p>جاري تحميل الأخبار...</p>
         </div>
     </section>
-
-    <main>
+    
+    <!-- المحتوى الرئيسي -->
+    <main class="content">
         <section class="intro">
             <h2>نحن نقدم الحلول التقنية الرائدة</h2>
             <p>نحن هنا لنبني حلول مبتكرة تلبي احتياجاتك التكنولوجية.</p>
             <a href="services.html" class="btn">اكتشف خدماتنا</a>
         </section>
+        <section>
+            <h1>مرحبًا بك في حلول تقنية</h1>
+            <p>هنا ستجد آخر الأخبار والمقالات التقنية المحدثة باستمرار.</p>
+            <button class="button" onclick="location.href='contact.html'">اتصل بنا</button>
+        </section>
     </main>
-
+    
     <footer>
         <p>&copy; 2025 TechPulse Gaza. جميع الحقوق محفوظة.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
