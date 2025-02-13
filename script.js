@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const newsContainer = document.getElementById("news-container");
 
-    // رابط RSS لأخبار التكنولوجيا من موقع TechCrunch
-    const rssUrl = "https://corsproxy.io/?https://feeds.feedburner.com/TechCrunch/";
+    // رابط RSS لأخبار التكنولوجيا من Google News
+    const rssUrl = "https://corsproxy.io/?https://news.google.com/rss/search?q=تكنولوجيا&hl=ar&gl=US&ceid=US:ar";
 
     fetch(rssUrl)
         .then(response => response.text())
@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
 
+            // تحديث شريط الأخبار
             newsContainer.innerHTML = newsHtml;
         })
         .catch(error => {
